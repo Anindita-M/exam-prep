@@ -22,7 +22,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin_anindita:Webdev2023@cluster0.pi8kdja.mongodb.net/examprepDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin_anindita:project2023@cluster0.pi8kdja.mongodb.net/examprepDB", {useNewUrlParser: true});
 
 const aboutContent = "This website has been created to collectively record the experiences of students in exams and their methods of preparation in different subjects.";
 
@@ -63,7 +63,7 @@ app.get("/",function(req,res){
     console.log(results);
     if(!err)
     {
-      res.render("home",{content:results});
+      res.render("home",{content:results,response:res});
     }
   })
 
@@ -71,7 +71,7 @@ app.get("/",function(req,res){
 
 app.get("/about",function(req,res){
 
-  res.render("about",{content:aboutContent});
+  res.render("about",{content:aboutContent,response:res});
 });
 
 app.get("/posts/:post_id",function(req,res){
@@ -94,7 +94,7 @@ app.get("/login",function(req,res){
       }
       else
       {
-        res.render("login");
+        res.render("login",{response:res});
       }
 });
 

@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="/CSS/styles.css">
   </head>
   <body>
+    <% response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); %>
     <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand"><ion-icon name="book-outline"></ion-icon> Exam-prep</a>
+      <a class="navbar-brand"><ion-icon name="book-outline"></ion-icon> Exam-Prep</a>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
         </li>
       </ul>
     </div>
