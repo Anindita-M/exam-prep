@@ -106,7 +106,7 @@ app.get("/register",function(req,res){
   }
   else
   {
-    res.render("register");
+    res.render("register",{response:res});
   }
 });
 
@@ -275,7 +275,7 @@ app.get("/:topic",function(req,res){
     else
     {
       console.log(results);
-      res.render("home",{content:results});
+      res.render("home",{content:results,response:res});
     }
    });
 });
