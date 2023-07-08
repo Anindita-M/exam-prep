@@ -6,4 +6,207 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+      .authorization{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('/images/login_background.png')no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar{
+  padding: 10px;
+  font-family: 'poppins',sans-serif;
+}
+.navbar ion-icon{
+  position: relative;
+  top:5px;
+}
+.login-form-box,.register-form-box{
+  margin:0;
+  padding:0;
+  font-family: 'poppins',sans-serif;
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: tranparent;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login,.register{
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.login-input,.register-input{
+  margin-bottom:30px;
+  width:310px;
+  border-bottom: 2px solid #fff;
+}
+.login-input input,.register-input input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+.login-input input::placeholder,.register-input input::placeholder{
+  color: #fff;
+}
+.login-input ion-icon,.register-input ion-icon{
+  position: absolute;
+  margin-top: 25px;
+  right: 50px;
+  color: #fff;
+  font-size: 1.2em;
+}
+.login-button,.register-button{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+footer
+{
+  background-color: #212529;
+  margin-bottom: -15px;
+  color: #ffffff8c;
+  font-family: 'poppins',sans-serif;
+  text-align: center;
+  padding: 15px;
+}
+.footer-link{
+  color: #ffffff8c;
+  text-decoration: none;
+  padding: 15px;
+}
+.name-tag{
+  padding-top: 15px;
+}
+.articles{
+  min-height: 100vh;
+  background: url('/images/option3_background.png')no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card{
+  margin-bottom: 7%;
+  font-family: 'poppins',sans-serif;
+  text-align: left;
+}
+.card-title{
+  font-weight: bold;
+}
+.card-subtitle{
+  font-weight: bold;
+  font-size: 1em;
+  padding: 2%;
+}
+.card-text{
+  height: 72px;
+}
+.read,.delete button,.edit button{
+  background-color: #212529;
+  color: #fff;
+}
+input,textarea:focus{
+  outline:none;
+}
+.search input{
+  width: 50%;
+  opacity: 0.5;
+  margin-left: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 2px solid #fff;
+  color: #000;
+  border-radius: 20px;
+  font-family: 'poppins',sans-serif;
+  font-weight: bold;
+}
+.search button,.compose-box button,.edit-box button{
+  width: 10%;
+  text-align: center;
+  height: 35px;
+  border-radius: 40px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'poppins',sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #000;
+}
+.delete button,.edit button{
+  margin-top: 7%;
+  width: 100%;
+}
+.contain{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.post,.about{
+  font-family: 'poppins',sans-serif;
+  width: 50%;
+  margin: auto;
+}
+.subtitle{
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+.text{
+  height: auto;
+}
+.compose-box,.edit-box{
+  padding: 5%;
+  margin:auto;
+  width: 50%;
+}
+.compose-value input,.compose-value textarea,.edit-value input,.edit-value textarea{
+  margin-bottom: 1%;
+  width:100%;
+  opacity:0.8;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #000;
+  font-family: 'poppins',sans-serif;
+  font-size: 1.2rem;
+}
+.compose-box button,.edit-box button{
+  width: 30%;
+  margin-top:3%;
+}
+.edit-value textarea{
+  height: 50%;
+}
+.edit-value label{
+  margin:3%;
+  color: #000;
+  font-family: 'poppins',sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.page{
+  color: #000;
+}
+.read:hover,.delete button:hover,.edit button:hover{
+  color: #fff;
+}
+    </style>
   </head>
