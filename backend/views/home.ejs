@@ -1,0 +1,28 @@
+<%- include("header3"); -%>
+
+<section class="articles">
+  <form class="search" action="/search" method="post">
+    <input type="text" name="searchOption" autocomplete="off">
+    <button type="submit" name="button" class="btn"><ion-icon name="search"></ion-icon> Search</button>
+  </form>
+
+  <div class="container-fluid home-article">
+    <div class="row">
+      <% content.forEach(function(element){ %>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title"><%= element.subject %></h3>
+            <h5 class="card-subtitle mb-2 text-muted"><%= element.username %></h5>
+            <h5 class="card-subtitle mb-2 text-muted"><%= element.year %></h5>
+            <p class="card-text"> <%= element.article.substring(0,100) +"...." %></p>
+            <a class="btn read" href="/posts/<%= element._id %>">Read More</a>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<%- include("footer"); -%>

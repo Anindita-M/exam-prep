@@ -1,0 +1,18 @@
+<%- include("header"); -%>
+
+    <section class="articles">
+      <div class="container-fluid row">
+        <div class="col-md-12 contain">
+          <div class="card post">
+            <div class="card-body">
+              <h3 class="card-title"><%= post.subject %></h3>
+              <h5 class="card-subtitle subtitle"><%= post.username %></h5>
+              <h5 class="card-subtitle subtitle"><%= post.year %></h5>
+              <p class="card-text text"><%= post.article %> %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<%- include("footer"); -%>
