@@ -153,27 +153,12 @@ app.post("/register",function(req,res){
 
 });
 
-app.post("/login",function(req,res){
-
-  const user = new User({
-    username: req.body.username,
-    password: req.body.password
+app.post('/login', 
+  passport.authenticate('local', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect("/yourPage/"+req.body.username);
   });
 
-  req.login(user, function(err){
-    if(err)
-    {
-      console.log(err);
-    }
-    else
-    {
-      passport.authenticate("local")(req,res,function(){
-
-        res.redirect("/yourPage/"+req.body.username);
-      });
-      }
-  });
-});
 app.post("/compose/:username",function(req,res){
 
   const post = new Exam ({
